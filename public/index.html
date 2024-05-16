@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dustori</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="gradient"></div>
+
+    <h1 data-tooltip="Dustori">Dustori v0.0.2</h1>
+
+    <div id="users"></div>
+
+    <div id="chat">
+        <div id="messages"></div>
+        <form id="message_wrapper">
+            <input type="text" id="message" autocomplete="off" />
+            <button id="send">Send</button>
+        </form>
+    </div>
+
+    <h2 id="title"></h2>
+
+    <table id="table">
+    </table>
+
+    <div id="ranking"></div>
+
+    <form action="" method="post" id="settings">
+        <div>
+            <div id="slots_menu">
+                <div id="slots">
+                </div>
+
+                <div id="slot_buttons">
+                    <button id="import_slots">
+                        <i class="fa-solid fa-upload"></i>
+                    </button>
+                    <button id="export_slots">
+                        <i class="fa-solid fa-download"></i>
+                    </button>
+                    <input type="text" id="slot_name" name="slot_name" autocomplete="off" />
+                    <button id="add_slot">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <input type="file" hidden id="import_file" />
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <div id="main_controls">
+                <label>
+                    <i class="fa-solid fa-pen"></i>
+                    <input type="text" id="input_title" name="input_title" autocomplete="off" />
+                </label>
+                <label>
+                    <i class="fa-solid fa-grip"></i>
+                    <input type="number" id="grid" min="2" max="8" value="5" />
+                </label>
+                <div id="gamemode">
+                    <div>
+                        <input type="radio" name="gamemode" id="gamemode_1" value="1" checked />
+                        <label for="gamemode_1">Default</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gamemode" id="gamemode_2" value="2" />
+                        <label for="gamemode_2">Race</label>
+                    </div>
+                </div>
+            </div>
+            <div id="bg">
+                <p>Chose a background image</p>
+                <div id="bg_image">
+                    <img height="100%" />
+                </div>
+                <input type="file" hidden id="bg_file" />
+            </div>
+        </div>
+        <div>
+            <button type="submit" id="submit">
+                <i class="fa-solid fa-floppy-disk"></i>
+                <span>Save settings</span>
+            </button>
+        </div>
+    </form>
+
+
+    <script src="https://kit.fontawesome.com/a0ebad5907.js" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
